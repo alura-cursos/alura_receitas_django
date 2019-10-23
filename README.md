@@ -2,13 +2,14 @@
 
 Projeto da Alura cursos online, desenvolvido em Python3 com framework Django
 
-## Projeto final aula 2
+## Projeto final aula 3
 
 Nessa aula:
 
-- Criamos uma pasta `templates` dentro do app de `receitas`, para manter nossos arquivos html;
+- Ajustamos os links da index, do logo através da template tag `url`;
 
-- Importamos uma página estilizada, com html, css e javascript;
+- Criamos o `base.html` para usar as mesmas partes do HTML em diferentes páginas da aplicação;
 
-- Carregamos esses arquivos, conhecidos como [arquivos estáticos](https://docs.djangoproject.com/pt-br/2.2/howto/static-files/) e melhoramos o visual da nossa aplicação.
+- Evitamos código duplicado do `menu` e do `footer` criando e incluindo `partials`.
+
 
