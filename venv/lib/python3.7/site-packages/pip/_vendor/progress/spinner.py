@@ -16,9 +16,11 @@
 
 from __future__ import unicode_literals
 from . import Infinite
+from .helpers import WriteMixin
 
 
-class Spinner(Infinite):
+class Spinner(WriteMixin, Infinite):
+    message = ''
     phases = ('-', '\\', '|', '/')
     hide_cursor = True
 
@@ -38,6 +40,5 @@ class MoonSpinner(Spinner):
 class LineSpinner(Spinner):
     phases = ['⎺', '⎻', '⎼', '⎽', '⎼', '⎻']
 
-
 class PixelSpinner(Spinner):
-    phases = ['⣾', '⣷', '⣯', '⣟', '⡿', '⢿', '⣻', '⣽']
+    phases = ['⣾','⣷', '⣯', '⣟', '⡿', '⢿', '⣻', '⣽']

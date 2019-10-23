@@ -1,10 +1,5 @@
 class UnpackException(Exception):
-    """Base class for some exceptions raised while unpacking.
-
-    NOTE: unpack may raise exception other than subclass of
-    UnpackException.  If you want to catch all error, catch
-    Exception instead.
-    """
+    """Deprecated.  Use Exception instead to catch all exception during unpacking."""
 
 
 class BufferFull(UnpackException):
@@ -15,25 +10,11 @@ class OutOfData(UnpackException):
     pass
 
 
-class FormatError(ValueError, UnpackException):
-    """Invalid msgpack format"""
-
-
-class StackError(ValueError, UnpackException):
-    """Too nested"""
-
-
-# Deprecated.  Use ValueError instead
-UnpackValueError = ValueError
+class UnpackValueError(UnpackException, ValueError):
+    """Deprecated.  Use ValueError instead."""
 
 
 class ExtraData(UnpackValueError):
-    """ExtraData is raised when there is trailing data.
-
-    This exception is raised while only one-shot (not streaming)
-    unpack.
-    """
-
     def __init__(self, unpacked, extra):
         self.unpacked = unpacked
         self.extra = extra
@@ -42,7 +23,19 @@ class ExtraData(UnpackValueError):
         return "unpack(b) received extra data."
 
 
-# Deprecated.  Use Exception instead to catch all exception during packing.
-PackException = Exception
-PackValueError = ValueError
-PackOverflowError = OverflowError
+class PackException(Exception):
+    """Deprecated.  Use Exception instead to catch all exception during packing."""
+
+
+class PackValueError(PackException, ValueError):
+    """PackValueError is raised when type of input data is supported but it's value is unsupported.
+
+    Deprecated.  Use ValueError instead.
+    """
+
+
+class PackOverflowError(PackValueError, OverflowError):
+    """PackOverflowError is raised when integer value is out of range of msgpack support [-2**31, 2**32).
+
+    Deprecated.  Use ValueError instead.
+    """
