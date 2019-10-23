@@ -2,14 +2,15 @@
 
 Projeto da Alura cursos online, desenvolvido em Python3 com framework Django
 
-## Projeto final aula 3
+## Projeto final aula 4
 
 Nessa aula:
 
-- Ajustamos os links da index, do logo através da template tag `url`;
+- Aprendemos como enviar dados para o template renderizar;
 
-- Criamos o `base.html` para usar as mesmas partes do HTML em diferentes páginas da aplicação;
+- Instalamos e configuramos o banco de dados Postgres com a nossa aplicação;
 
-- Evitamos código duplicado do `menu` e do `footer` criando e incluindo `partials`.
+- Criamos o modelo de receitas e mapeamos para uma tabela no banco de dados.
+
 
 
