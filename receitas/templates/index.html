@@ -30,41 +30,22 @@
     <section class="best-receipe-area">
         <div class="container">
             <div class="row">
+                {% if receitas %}
+                {% for receita in receitas %}
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
                         <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="">
                         <div class="receipe-content">
-                            <a href="receita.html">
-                                <h5>Nome da receita</h5>
+                            <a href="{% url 'receita' receita.id %}">
+                                <h5>{{ receita.nome_receita }}</h5>
                             </a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-best-receipe-area mb-30">
-                        <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="">
-                        <div class="receipe-content">
-                            <a href="receita.html">
-                                <h5>Nome da receita</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-best-receipe-area mb-30">
-                        <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="">
-                        <div class="receipe-content">
-                            <a href="receita.html">
-                                <h5>Nome da receita</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
+                {% else %}
+                {% endif %}
             </div>
         </div>
     </section>

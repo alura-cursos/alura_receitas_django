@@ -26,8 +26,6 @@
 
     {% include 'partials/menu.html' %}
 
-    <div class="receipe-post-area section-padding-80">
-
         <!-- Receipe Post Search -->
         <div class="receipe-post-search mb-80">
             <div class="container">
@@ -66,12 +64,12 @@
                 <div class="row">
                     <div class="col-12 col-md-8">
                         <div class="receipe-headline my-5">
-                            <span>30 de Fevereiro, 2000</span>
-                            <h2>Nome da receita</h2>
+                            <span>{{ receita.data_receita }}</span>
+                            <h2>{{receita.nome_receita}}</h2>
                             <div class="receipe-duration">
-                                <h6>Preparo: 15 minutos</h6>
-                                <h6>Rendimento: 2 porçoes</h6>
-                                <h6>Categoria: categoria</h6>
+                                <h6>Preparo: {{receita.tempo_preparo}} minutos</h6>
+                                <h6>Rendimento: {{receita.rendimento}}</h6>
+                                <h6>Categoria: {{receita.categoria}}</h6>
                                 <h6>Por: Pessoa</h6>
                             </div>
                         </div>
@@ -81,7 +79,7 @@
                     <div class="col-12 col-lg-8">
                         <!-- Single Preparation Step -->
                         <div class="single-preparation-step d-flex">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                            <p>{{receita.modo_preparo}}</p>
                         </div>
                     </div>
 
@@ -90,7 +88,7 @@
                         <div class="ingredients">
                             <h4>Ingredientes</h4>
                             <div class="ingredients">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec varius dui. Suspendisse potenti. Vestibulum ac pellentesque tortor. Aenean congue sed metus in iaculis. Cras a tortor enim. Phasellus posuere vestibulum ipsum, eget lobortis purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                                <p>{{receita.ingredientes}}</p>
                             </p>
                             </div>
                         </div>

@@ -2,15 +2,14 @@
 
 Projeto da Alura cursos online, desenvolvido em Python3 com framework Django
 
-## Projeto final aula 4
+## Projeto final aula 5
 
 Nessa aula:
 
-- Aprendemos como enviar dados para o template renderizar;
+- Aprendemos como enviar e exibir dados para uma página;
 
-- Instalamos e configuramos o banco de dados Postgres com a nossa aplicação;
+- Exibimos as receitas que estão no banco de dados;
 
-- Criamos o modelo de receitas e mapeamos para uma tabela no banco de dados.
-
+- Alteramos a `url` da index, exibindo como cada receita é feita, seus ingredientes e outras informações.
 
 
