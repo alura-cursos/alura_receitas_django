@@ -2,15 +2,14 @@
 
 Projeto da Alura cursos online, desenvolvido em Python3 com framework Django
 
-## Projeto final aula 1
+## Projeto final aula 3
 
 Nessa aula:
 
-- Criamos uma pasta para manter todo código da nossa aplicação;
+- Ajustamos os links da index, do logo através da template tag `url`;
 
-- Utilizamos o módulo venv, que fornece suporte para a criação de ambientes virtuais leves com seus próprios diretórios, opcionalmente isolados dos diretórios do sistema;
+- Criamos o `base.html` para usar as mesmas partes do HTML em diferentes páginas da aplicação;
 
-- Utilizamos o pip para instalar o Django em nosso ambiente virtual;
+- Evitamos código duplicado do `menu` e do `footer` criando e incluindo `partials`.
 
-- Iniciamos o desenvolvimento da nossa aplicação com o comando django-admin start project alurareceita e subimos o servidor com o comando python manage.py runserver.
 

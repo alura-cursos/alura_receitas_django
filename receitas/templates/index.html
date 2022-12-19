@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Preloader -->
+    <div id="preloader">
+        <i class="circle-preloader"></i>
+        <img src="{% static 'img/core-img/pizza.png' %}" alt="">
+    </div>
+
+    <!-- Search Wrapper -->
+    <div class="search-wrapper">
+        <!-- Close Btn -->
+        <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form action="#" method="post">
+                        <input type="search" name="search" placeholder="O que está procurando...">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'partials/menu.html' %}
+
+    <!-- ##### Best Receipe Area Start ##### -->
+    <section class="best-receipe-area">
+        <div class="container">
+            <div class="row">
+                <!-- Single Best Receipe Area -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-best-receipe-area mb-30">
+                        <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="">
+                        <div class="receipe-content">
+                            <a href="receita.html">
+                                <h5>Nome da receita</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Best Receipe Area -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-best-receipe-area mb-30">
+                        <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="">
+                        <div class="receipe-content">
+                            <a href="receita.html">
+                                <h5>Nome da receita</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Best Receipe Area -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-best-receipe-area mb-30">
+                        <img src="{% static 'img/bg-img/foto_receita.png' %}" alt="">
+                        <div class="receipe-content">
+                            <a href="receita.html">
+                                <h5>Nome da receita</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Best Receipe Area End ##### -->
+
+    {% include 'partials/footer.html' %}
+{% endblock %}

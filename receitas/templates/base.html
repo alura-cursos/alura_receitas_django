@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Título -->
+    <title>Alura Receitas</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'site.css' %}">
+
+</head>
+
+<body>
+
+    {% block content %} {% endblock %}
+    
+  <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'js/plugins/plugins.js'%}"></script>
+    <!-- Active js -->
+    <script src="{% static 'js/active.js' %}"></script>
+</body>
+
+</html>
